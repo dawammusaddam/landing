@@ -1,0 +1,47 @@
+
+<!-- Navbar STart -->
+<header id="topnav" class="defaultscroll sticky" (window:scroll)="windowScroll()" [class]="navClass"
+  [ngClass]="{'tagline-height': sliderTopbar == true}">
+  <div class="container">
+    <!-- Logo container-->
+    <div>
+      @if(navClass !== 'nav-light'){
+      <a class="logo" routerLink="/index">
+        <img src="assets/images/logo-dark.png" class="l-dark logo-light-mode" height="24" alt="">
+        <img src="assets/images/logo-light.png" class="logo-dark-mode" height="24" alt="">
+      </a>
+    }
+
+      @if(navClass === 'nav-light'){
+      <a class="logo" routerLink="/index">
+        <img src="assets/images/logo-dark.png" class="l-dark" height="24" alt="">
+        <img src="assets/images/logo-light.png" class="l-light" height="24" alt="">
+      </a>
+    }
+    </div>
+    <!--end Logo container-->
+
+    @if(Menuoption == 'center'){
+    <div id="navigation">
+      <!-- Navigation Menu-->
+      <ul class="navigation-menu" [class]="navClass">
+        <li><a routerLink="/" class="nav-link-ref">Home</a></li>
+        <li><a href="#moderncode" class="nav-link-ref">Feature</a></li>
+        <li><a href="/" class="nav-link-ref">Contact</a></li>
+        <li><a routerLink="/" class="nav-link-ref">About</a></li>
+      </ul>
+      <!--end navigation menu-->
+      <div class="buy-menu-btn d-none">
+        <a href="javascript: void(0);" target="_blank" class="btn btn-primary">Buy Now</a>
+      </div>
+      <!--end login button-->
+      <!--end login button-->
+    </div>
+    }
+    <!--end navigation-->
+
+  </div>
+  <!--end container-->
+</header>
+<!--end header-->
+<!-- Navbar End -->

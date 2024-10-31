@@ -1,0 +1,11 @@
+# Direktori node_modules
+Landing-bajrah/node_modules/
+Landing-snki/node_modules/
+
+# Direktori output build
+Landing-bajrah/dist/
+Landing-snki/dist/
+
+# Direktori Angular cache (untuk versi Angular yang lebih baru)
+Landing-bajrah/.angular/
+Landing-snki/.angular/
