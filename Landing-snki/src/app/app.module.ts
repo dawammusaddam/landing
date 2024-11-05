@@ -43,6 +43,7 @@ import { EmailInvoiceComponent } from './email/email-invoice/email-invoice.compo
 import { EmailPasswordResetComponent } from './email/email-password-reset/email-password-reset.component';
 import { IndexComponent } from './core/components/index/index.component';
 import { IndexServicesComponent } from './core/components/index-services/index-services.component';
+import { NewsDetailComponent } from './core/components/news-detail/news-detail.component';
 import { FeatherModule } from 'angular-feather';
 
 // Apex chart
@@ -58,6 +59,8 @@ import { AuthBsSignupComponent } from './auth/auth-bs-signup/auth-bs-signup.comp
 import { AuthSignupBgVideoComponent } from './auth/auth-signup-bg-video/auth-signup-bg-video.component';
 import { AuthBsResetComponent } from './auth/auth-bs-reset/auth-bs-reset.component';
 import { AuthResetPasswordBgVideoComponent } from './auth/auth-reset-password-bg-video/auth-reset-password-bg-video.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NewsListComponent } from './core/components/news-list/news-list.component';
 
 
 @NgModule({
@@ -81,14 +84,16 @@ import { AuthResetPasswordBgVideoComponent } from './auth/auth-reset-password-bg
     EmailInvoiceComponent,
     EmailPasswordResetComponent,
     IndexComponent,
-    IndexServicesComponent,
     SwitcherComponent,
     AuthBsLoginComponent,
     AuthLoginBgVideoComponent,
     AuthBsSignupComponent,
     AuthSignupBgVideoComponent,
     AuthBsResetComponent,
-    AuthResetPasswordBgVideoComponent
+    AuthResetPasswordBgVideoComponent,
+    IndexServicesComponent,
+    NewsDetailComponent,
+    NewsListComponent
   ],
   imports: [
     BrowserModule,
@@ -114,7 +119,8 @@ import { AuthResetPasswordBgVideoComponent } from './auth/auth-reset-password-bg
     NgxMasonryModule,
     LightboxModule,
     SharedModule,
-    SimplebarAngularModule
+    SimplebarAngularModule,
+    HttpClientModule
   ],
   exports: [
     FeatherModule,

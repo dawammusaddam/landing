@@ -1,7 +1,10 @@
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ApiService } from 'src/app/service/api.service';
+import { environment } from 'src/environments/environment';
 
+const APIROOTURL = environment.apiRootUrl;
 @Component({
   selector: 'app-index-services',
   templateUrl: './index-services.component.html',
@@ -19,12 +22,14 @@ export class IndexServicesComponent implements OnInit {
   footerClass: true;
   footerVariant = 'bg-light';
   // Set Topbar Option
-  Menuoption = 'center';
-  Settingicon = true
-  Nfticons = true;
+  Settingicon = true;
+  APIROOTURL = APIROOTURL;
   
 
-  constructor(private modalService: NgbModal, private route: ActivatedRoute) { }
+  constructor(
+    private modalService: NgbModal, 
+    private router: Router, 
+    private apiService: ApiService) {}
 
   num: number = 0;
   option = {
@@ -37,6 +42,7 @@ export class IndexServicesComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.listBerita();
   }
 
   /**
@@ -91,6 +97,38 @@ export class IndexServicesComponent implements OnInit {
 
     // Set focus to the div
     this.kegiatanSec.nativeElement.focus();
+  }
+
+  windowScroll() {
+    if (
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
+    ) {
+      document.getElementById("topnav").classList.add("nav-sticky");
+    } else {
+      document.getElementById("topnav").classList.remove("nav-sticky");
+    }
+  }
+
+  navigateToKegiatan(): void {
+    // Scroll to the div
+    this.router.navigate(['news-list'])
+  }
+
+  beritas: any;
+  listBerita(): void{
+    const newsData = new FormData();
+
+    newsData.append('pagination[page]', "1");
+    newsData.append('pagination[pages]', "1");
+    newsData.append('pagination[perpage]', "3");
+    newsData.append('pagination[total]', "3");
+    newsData.append('sort[field]', "created_at");
+    newsData.append('sort[sort]', "desc");
+
+    this.apiService.post('berita/datatable', newsData).subscribe( res => {
+      this.beritas = res;
+    });
   }
   
 }

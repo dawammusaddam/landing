@@ -11,6 +11,7 @@ import { FeaturesComponent } from './features/features.component';
 import { BlogComponent } from './blog/blog.component';
 import { CustomerTestmonialComponent } from './customer-testmonial/customer-testmonial.component';
 import { ComponentSidebarComponent } from './component-sidebar/component-sidebar.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ComponentSidebarComponent } from './component-sidebar/component-sidebar
     BlogComponent,
     CustomerTestmonialComponent,
     ComponentSidebarComponent,
+    HeaderComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +35,8 @@ import { ComponentSidebarComponent } from './component-sidebar/component-sidebar
     FeaturesComponent, 
     BlogComponent, 
     CustomerTestmonialComponent,
-    ComponentSidebarComponent
+    ComponentSidebarComponent,
+    HeaderComponent
   ]
 })
 

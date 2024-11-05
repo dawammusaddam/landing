@@ -1,0 +1,44 @@
+<!-- Navbar STart -->
+<header id="topnav" class="defaultscroll sticky"  (window:scroll)="windowScroll()">
+    <div class="container">
+      <!-- Logo container-->
+      <div>
+        
+        <a class="logo" routerLink="/">
+          <img src="assets/images/logo.png" class="l-dark logo-light-mode" height="24" alt="">
+          <!-- <img src="assets/images/logo-light.png" class="logo-dark-mode" height="24" alt=""> -->
+        </a>
+      </div>
+      <!--end Logo container-->
+  
+      <div id="navigation">
+        <!-- Navigation Menu-->
+        <ul class="navigation-menu buy-button list-inline mb-0">
+          <li><a href="javascript:void(0);" (click)="navigateToHome()" class="nav-link-ref">Beranda</a></li>
+          <li><a href="javascript:void(0);" (click)="navigateToHome()" class="nav-link-ref">Tentang</a></li>
+          <li><a href="javascript:void(0);" (click)="navigateToHome()" class="nav-link-ref">Layanan</a></li>
+          <li><a href="javascript:void(0);" (click)="navigateToHome()" class="nav-link-ref">Visi & Visi</a></li>
+          <li><a href="javascript:void(0);" (click)="navigateToHome()" class="nav-link-ref">Kegiatan</a></li>
+        </ul>
+        <!--end navigation menu-->
+        <div class="buy-menu-btn d-none">
+          <a href="javascript: void(0);" target="_blank" class="btn btn-primary">Masuk</a>
+        </div>
+        <!--end login button-->
+        <!--end login button-->
+      </div>
+      <!--end navigation-->
+  
+      <ul class="buy-button list-inline mb-0">
+    
+        <li class="list-inline-item ps-1 mb-0">
+          <a href="https://admin.snki.or.id/login" target="_blank" class="btn btn-pills btn-snki">
+            <i class="uil uil-user"></i> Login
+          </a>
+        </li>
+      </ul><!--end login button-->
+    </div>
+    <!--end container-->
+  </header>
+  <!--end header-->
+  <!-- Navbar End -->

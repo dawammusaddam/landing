@@ -25,6 +25,8 @@ import { AuthBsSignupComponent } from './auth/auth-bs-signup/auth-bs-signup.comp
 import { AuthSignupBgVideoComponent } from './auth/auth-signup-bg-video/auth-signup-bg-video.component';
 import { AuthBsResetComponent } from './auth/auth-bs-reset/auth-bs-reset.component';
 import { AuthResetPasswordBgVideoComponent } from './auth/auth-reset-password-bg-video/auth-reset-password-bg-video.component';
+import { NewsDetailComponent } from './core/components/news-detail/news-detail.component';
+import { NewsListComponent } from './core/components/news-list/news-list.component';
 
 const routes: Routes = [
   {
@@ -35,6 +37,8 @@ const routes: Routes = [
       { path: 'index', component: IndexComponent },
       
       { path: 'index-services', component: IndexServicesComponent },
+      { path: 'news-detail/:slug', component: NewsDetailComponent },
+      { path: 'news-list', component: NewsListComponent },
       { path: '#', component: SwitcherComponent },
     ]
   },
